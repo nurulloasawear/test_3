@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard 3</title>
+    <link rel="stylesheet" href="../asserts/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Boshqaruv Paneli 3</h1>
+        <div class="user-info">
+            <span id="username-display"></span>
+            <button id="logout-btn">Chiqish</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Bosh sahifa</a></li>
+                <li><a href="#">Buyurtmalar</a></li>
+                <li><a href="#">Mijozlar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="overview">
+            <h2>Umumiy Ko'rinish</h2>
+            <div class="widget">
+                <h3>Jami Buyurtmalar</h3>
+                <p class="number">500</p>
+            </div>
+            <div class="widget">
+                <h3>Yangi Mijozlar</h3>
+                <p class="number">50</p>
+            </div>
+        </section>
+        <section class="order-list">
+            <h2>Oxirgi Buyurtmalar</h2>
+            <table id="order-table">
+                <thead>
+                    <tr>
+                        <th>Buyurtma raqami</th>
+                        <th>Sana</th>
+                    </tr>
+                </thead>
+                <tbody id="order-body">
+                    </tbody>
+            </table>
+        </section>
+        <section class="customer-list">
+            <h2>Mijozlar</h2>
+            <table id="customer-table">
+                <thead>
+                    <tr>
+                        <th>Ismi</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody id="customer-body">
+                    </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Loyiha 3</p>
+    </footer>
+    <script src="../asserts/js/scripts.js"></script>
+</body>
+</html>

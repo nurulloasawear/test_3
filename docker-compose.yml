@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./src
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./src:/app
+    environment:
+      - DJANGO_SETTINGS_MODULE=myproject.settings # Loyiha nomingizga moslang
+    depends_on:
+      - db
+
+  frontend:
+    build:
+      context: ./src
+      dockerfile: frontend/Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src/frontend:/app/frontend
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:13
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data/
+
+volumes:
+  db_data:

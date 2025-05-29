@@ -1,0 +1,162 @@
+ 
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 20px;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+main {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.overview, .charts, .recent-orders {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.overview {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 20px;
+    margin-bottom: 20px;
+}
+
+.widget {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.widget h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 1.2em;
+}
+
+.widget .number {
+    font-size: 2em;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.widget .text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #007bff;
+}
+
+.widget .description {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.charts h2, .recent-orders h2 {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+
+.chart-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.chart-container h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #555;
+    text-align: center;
+}
+
+.chart-container #sales-chart,
+.chart-container #user-activity-chart,
+.chart-container #inventory-chart,
+.chart-container #customer-demographics-chart {
+    height: 200px; /* Vaqtinchalik balandlik */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white; /* Grafik uchun fon */
+}
+
+.recent-orders {
+    grid-column: 1 / -1;
+}
+
+.recent-orders table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.recent-orders th, .recent-orders td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.recent-orders th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+.recent-orders tbody tr:last-child td {
+    border-bottom: none;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
